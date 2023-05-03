@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meditation App</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.410.0.min.js"></script>
+</head>
+<body>
+    <h1 class="title"><span class="emoji">🧘</span> Mindrise </h1>
+
+    <div id="progressContainer">
+        <div id="progressBar"></div>
+    </div>
+    <p></p>
+    <div id="progressBarLabel"></div>
+    <p></p>
+    <div id="buttonContainer">
+      <button id="meditationBtn" class="start">Start Meditation</button>
+      <button id="settingsBtn" class="settings">⚙️</button>
+    </div>
+    
+
+    <div id="settingsModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Settings</h2>
+        <form id="settingsForm">
+          <div class="form-group">
+            <label for="usePolly">Use AWS Polly:</label>
+            <input type="checkbox" id="usePolly" name="usePolly">
+          </div>
+          <div class="form-group">
+            <label for="pollyApiKey">AWS API Key:</label>
+            <input type="text" id="pollyApiKey" name="pollyApiKey" />
+          </div>
+          <div class="form-group">
+            <label for="awsRegion">AWS Region:</label>
+            <input type="text" id="pollyRegion" name="pollyRegion" />
+          </div>
+
+          <div class="form-group">
+            <label for="pollyVoice">Voice Name:</label>
+            <input type="text" id="pollyVoice" name="pollyVoice" />
+          </div>
+          <div class="form-group">
+            <label for="testModeCheckbox">Test Mode:</label>
+            <input type="checkbox" id="testModeCheckbox" name="testModeCheckbox" />
+          </div>
+          <div class="form-group">
+            <label for="meditationStepsTextarea">Meditation Steps (JSON):</label>
+            <textarea id="meditationSteps" name="meditationStepsTextarea"></textarea>
+          </div>
+          <button type="submit">Save</button>
+        </form>
+      </div>
+    </div>
+    
+  
+    
+    <script src="app.js"></script>
+</body>
+
+
+
+</html>
